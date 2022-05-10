@@ -45,7 +45,7 @@ namespace SLBFE_Employement_API.Controllers
         }
 
         [HttpPost(".{format}"), FormatFilter]
-        public async Task<IActionResult> CreateComplaint([FromBody] CreateUserRequest request)
+        public async Task<IActionResult> CreateUser([FromBody] CreateUserRequest request)
         {
             return Ok(await _repository.CreateUser(request).ConfigureAwait(false));
         }
